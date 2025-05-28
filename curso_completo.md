@@ -58,9 +58,9 @@ Implementaremos a lógica de Partida-Parada com Selo. Esta é uma das estruturas
     // O contato de selo Motor_Esteira mantém a esteira ligada após
     // Botao_Partida ser liberado.
     
-          +----[ ]-----+-----[/]----( )----
+          +----[ ]--------+-------[/]----------( )----
           | Botao_Partida |  Botao_Parada  Motor_Esteira
-          |   (M0.0)      |   (M0.1)     (Q0.0)
+          |   (M0.0)      |     (M0.1)        (Q0.0)
     ------|               |
           | Motor_Esteira |
           |   (Q0.0)      |
@@ -143,9 +143,9 @@ O controle será direto: a válvula de enchimento permanecerá aberta enquanto o
     // sensor de nível alto não estiver ativo. Quando o sensor
     // detectar líquido (nível alto), a válvula fecha.
     
-    ----[/]------------( )----
+    ---------[/]---------------( )----
       Sensor_Nivel_Alto  Valvula_Enchimento
-        (I0.0)           (Q0.0)
+            (I0.0)            (Q0.0)
     ```
 
 3.  **Explicação da Lógica:**
@@ -229,17 +229,17 @@ Utilizaremos temporizadores On-Delay (TON) para controlar os tempos e lógica de
     // Usaremos a saída do Timer Vermelho (T3.Q) para reiniciar o ciclo.
     // O contato NF T1.Q garante que o vermelho só ligue quando verde apagar.
     
-    ----[ ]----[/]----(S)----
-      T3.Q     T1.Q    Luz_Vermelha
-                       (Q0.2)
+    ----[ ]-------[/]--------(S)----
+        T3.Q     T1.Q    Luz_Vermelha
+                           (Q0.2)
     
     NETWORK 2: Temporizador Vermelho (TON)
     TITLE=Timer Luz Vermelha
     // Descrição: Conta o tempo da luz vermelha (5 segundos).
     
-    ----[ ]----[TON T3, PT:5s]--
+    ------[ ]---------[TON T3, PT:5s]--
       Luz_Vermelha
-      (Q0.2)
+        (Q0.2)
     
     NETWORK 3: Ligar Verde (quando Vermelho termina), Desligar Vermelho
     TITLE=Transição Vermelho -> Verde
@@ -248,10 +248,10 @@ Utilizaremos temporizadores On-Delay (TON) para controlar os tempos e lógica de
     
     ----[ ]------------(S)----
       T3.Q           Luz_Verde
-                       (Q0.0)
+                      (Q0.0)
     ----[ ]------------(R)----
       T3.Q           Luz_Vermelha
-                       (Q0.2)
+                      (Q0.2)
     
     NETWORK 4: Temporizador Verde (TON)
     TITLE=Timer Luz Verde
