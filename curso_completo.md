@@ -8,27 +8,28 @@
 
 
 
-/home/ubuntu/estrutura_curso.md
+[Estrutura Curso](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/estrutura_curso.md)
 
-/home/ubuntu/modulo_01_rascunho.md
+[Módulo 01](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_01_rascunho.md)
 
-/home/ubuntu/modulo_02_rascunho.md
+[Módulo 02](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_02_rascunho.md)
 
-/home/ubuntu/modulo_03_rascunho.md
+[Módulo 03](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_03_rascunho.md)
 
-/home/ubuntu/modulo_04_rascunho.md
+[Módulo 04](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_04_rascunho.md)
 
-/home/ubuntu/modulo_05_rascunho.md
+[Módulo 05](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_05_rascunho.md)
 
-/home/ubuntu/modulo_06_rascunho.md
+[Módulo 06](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_06_rascunho.md)
 
-/home/ubuntu/modulo_07_rascunho.md
+[Módulo 07](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_07_rascunho.md)
 
-/home/ubuntu/modulo_08_rascunho.md
+[Módulo 08](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_08_rascunho.md)
 
-/home/ubuntu/modulo_09_rascunho.md
+[Módulo 09](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_09_rascunho.md)
 
-/home/ubuntu/modulo_10_rascunho.md
+[Módulo 10](https://github.com/acarolli/curso-automacao-winsps-s7-e-factory-io/blob/main/modulo_10_rascunho.md)
+
 # Exercício Prático 1: Partida Direta de Motor (Esteira)
 
 **Objetivo:** Implementar a lógica fundamental de controle industrial: ligar e desligar um motor de esteira transportadora utilizando botões virtuais (memórias internas) com a clássica lógica de selo.
@@ -57,13 +58,13 @@ Implementaremos a lógica de Partida-Parada com Selo. Esta é uma das estruturas
     // O contato de selo Motor_Esteira mantém a esteira ligada após
     // Botao_Partida ser liberado.
     
-          +----[ ]----+----[/]----( )----
+          +----[ ]-----+-----[/]----( )----
           | Botao_Partida |  Botao_Parada  Motor_Esteira
-          |   (M0.0)    |   (M0.1)     (Q0.0)
-    ------|           |
+          |   (M0.0)      |   (M0.1)     (Q0.0)
+    ------|               |
           | Motor_Esteira |
-          |   (Q0.0)    |
-          +----[ ]----+
+          |   (Q0.0)      |
+          +----[ ]--------+
     ```
 
 3.  **Explicação da Lógica:**
