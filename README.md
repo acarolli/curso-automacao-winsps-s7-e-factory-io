@@ -40,7 +40,7 @@ Aprenda a programar CLPs Siemens S7 em **Ladder** sem precisar de um CLP físico
 
 ## Projetos finais
 
-- 🏭 [**Linha de montagem automatizada**](projeto_final_01_montagem.md): etapas sequenciais em um produto, com programa estruturado em FCs/FBs, lista de I/O e fluxograma.
+- 🏭 [**Linha de montagem automatizada**](projeto_final_01_montagem.md): etapas sequenciais em um produto, com programa estruturado em FCs/FBs; o entregável inclui lista de I/O e fluxograma do ciclo.
 - 📦 [**Armazém automático (AS/RS)**](projeto_final_02_asrs.md): armazenar e retirar caixas de prateleiras com um transelevador.
 
 Cada projeto traz requisitos, descrição funcional, programa Ladder, configuração da cena, roteiro de testes e documentação.
